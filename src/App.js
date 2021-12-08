@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import logo from "./logo.svg";
 import Voicesearch from "./components/voicesearch.js";
+import Mixcloud from "./components/mixcloud.js"
 
 
 
@@ -15,6 +16,7 @@ function App() {
         
       </header>
       <Voicesearch />
+      <Mixcloud />
     </div>
   );
 }
