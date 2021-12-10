@@ -6,9 +6,16 @@ import SpeechRecognition, {
 import microPhoneIcon from "./microphone.svg";
 
 function Voicesearch() {
+
   const commands = [
     {
-      command: "open *",
+        
+      command: "  * " ,
+      callback: (genre) => {
+        var genresearch = genre;
+      },
+    
+      /*command: "open *",
       callback: (website) => {
         window.open("http://" + website.split(" ").join(""));
       },
@@ -19,7 +26,7 @@ function Voicesearch() {
         document.body.style.background = color;
       },
     },
-    {
+    {*/
       command: "reset",
       callback: () => {
         handleReset();
@@ -39,7 +46,7 @@ function Voicesearch() {
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return (
       <div className="mircophone-container">
-        Browser is not Support Speech Recognition.
+        Browser does not Support Speech Recognition.
       </div>
     );
   }

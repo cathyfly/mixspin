@@ -6,36 +6,51 @@ import axios from "axios";
     mixcloudembed: "embed-html"
 }*/
 
-const url = "https://api.mixcloud.com/search/?q=irish&type=cloudcast";
+
+
+const url = "https://api.mixcloud.com/search/?q=pcmusic&type=cloudcast";
+
+
 
 function Mixcloud() {
   
   const [show, setShow] = useState(null);
+  const [random] = useState(Math.floor(Math.random() * 19));
+
+ 
+
  
 
   useEffect(() => {
     axios.get(url).then((response) => {
+        //random = Math.random() * 19;
        console.log(response.data); 
       setShow(response.data);
     });
   }, [url]);
 
-  
+
+    //function getRandom() {
+      //setRand((rand) => Math.random() * 19);
+    //}
+
+   //rand = 0 + Math.random() * (19 - 0);
+    //this.setState({ random: this.state.random + rand });
+  //this.setState({ random: this.state.random + Math.random()*19 });
 
   if (show) {
+      //random = Math.random() * 19;
     return (
       <div>
-        <h1>{show.data[19].key}embed-html/</h1>
-        <iframe src={show.data[19].url} embed-json />
-
-        <iframe src="https://api.mixcloud.com"{show.data[19].key}"embed-html/"/>
+        <h4>{show.data[random].name}</h4>
+        
+        
 
         <iframe
-          width="100%"
-          height="120"
-          src="{show.data[19].url}"
-          frameborder="0"
-        ></iframe>
+          src={
+            "https://api.mixcloud.com" + show.data[random].key + "embed-html/"
+          }
+        />
       </div>
     );
   }
@@ -44,11 +59,7 @@ function Mixcloud() {
   <div></div>
   )
 
-  return (
-    <div>
-      <h1> sounds go here </h1>
-    </div>
-  );
+  
 }
 
 export default Mixcloud;
