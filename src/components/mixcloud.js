@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
+
 
 /*props = {
     mixcloudurl: "https://api.mixcloud.com",
@@ -8,26 +9,39 @@ import axios from "axios";
 
 
 
-const url = "https://api.mixcloud.com/search/?q=pcmusic&type=cloudcast";
 
 
 
-function Mixcloud() {
+
+function Mixcloud(props) {
   
   const [show, setShow] = useState(null);
   const [random] = useState(Math.floor(Math.random() * 19));
 
- 
+  //const genre = useRef(props.genre);
+
+  //const url = "https://api.mixcloud.com/search/?q=" + {this.props.genreinput} + "&type=cloudcast";
+
+  //const url = "https://api.mixcloud.com/search/?q=" + props.genre + "&type=cloudcast";
 
  
+ 
+ 
+ 
+  useEffect(() => { //gets called eveytime the mixcloud component gets rendered
+      console.log(props);
 
-  useEffect(() => {
-    axios.get(url).then((response) => {
+      if (props.genre != "")  {
+      console.log(props.genre);
+    axios.get("https://api.mixcloud.com/search/?q=" + props.genre + "&type=cloudcast").then((response) => {
         //random = Math.random() * 19;
        console.log(response.data); 
       setShow(response.data);
-    });
-  }, [url]);
+    }); }
+
+    
+  }, [props]); // if "props" ever changes ie if a new genre is inout via voice, a new call is sent to the api with the new genre
+  
 
 
     //function getRandom() {

@@ -5,15 +5,22 @@ import SpeechRecognition, {
 /*import "./App.css";*/
 import microPhoneIcon from "./microphone.svg";
 
-function Voicesearch() {
+function Voicesearch(props) {
 
   const commands = [
     {
         
-      command: "  * " ,
+      command: "Play *" ,
       callback: (genre) => {
-        var genresearch = genre;
+          
+        props.genreHandler(genre);
+        document.body.style.background = "pink";
+
+        //
+        
+        
       },
+    }
     
       /*command: "open *",
       callback: (website) => {
@@ -25,14 +32,14 @@ function Voicesearch() {
       callback: (color) => {
         document.body.style.background = color;
       },
-    },
-    {*/
+    },*/
+    ,{
       command: "reset",
       callback: () => {
         handleReset();
       },
     },
-    ,
+    
     {
       command: "reset background colour",
       callback: () => {
@@ -53,9 +60,9 @@ function Voicesearch() {
   const handleListing = () => {
     setIsListening(true);
     microphoneRef.current.classList.add("listening");
-    SpeechRecognition.startListening({
-      continuous: true,
-    });
+    SpeechRecognition.startListening(/*{
+      //continuous: true,
+    }*/);
   };
   const stopHandle = () => {
     setIsListening(false);
@@ -67,6 +74,9 @@ function Voicesearch() {
     resetTranscript();
   };
   return (
+
+
+      
     <div className="microphone-wrapper">
       <div className="mircophone-container">
         <div
@@ -96,4 +106,6 @@ function Voicesearch() {
     </div>
   );
 }
+
+
 export default Voicesearch;
