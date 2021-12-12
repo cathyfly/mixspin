@@ -1,8 +1,9 @@
+import React from "react";
 import { useRef, useState } from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-/*import "./App.css";*/
+
 import microPhoneIcon from "./microphone.svg";
 
 function Voicesearch(props) {

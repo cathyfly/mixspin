@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+<head>
+
+  <title> Mixspin </title>;
+
+  </head>
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

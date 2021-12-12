@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import logo from "./logo.svg";
 import Voicesearch from "./components/voicesearch.js";
 import Mixcloud from "./components/mixcloud.js";
+import Genrestext from "./components/genrestext.js";
 
 
 
@@ -31,7 +32,10 @@ class App extends Component {
     //pass genre to mixcloud "child" component 
    return (
      <div className="App">
-       <header className="App-header"></header>
+       
+
+       <Genrestext />
+       
        <Voicesearch genreHandler={genreHandler.bind(this)} />
 
        <Mixcloud genre={this.state.genre} /> 

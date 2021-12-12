@@ -40,7 +40,7 @@ function Mixcloud(props) {
     }); }
 
     
-  }, [props]); // if "props" ever changes ie if a new genre is inout via voice, a new call is sent to the api with the new genre
+  }, [props]); // if "props" ever changes ie if a new genre is input via voice, a new call is sent to the api with the new genre
   
 
 
@@ -53,20 +53,30 @@ function Mixcloud(props) {
   //this.setState({ random: this.state.random + Math.random()*19 });
 
   if (show) {
-      //random = Math.random() * 19;
+    //random = Math.random() * 19;
     return (
+      
       <div>
+      
         <h4>{show.data[random].name}</h4>
-        
-        
 
         <iframe
           src={
             "https://api.mixcloud.com" + show.data[random].key + "embed-html/"
           }
+          width={"100%"}
+          height={"180"}
+          allow="autoplay 'src'"
         />
       </div>
     );
+  } else {
+    <div>
+      <h4>
+        {" "}
+        oh oh! please try another genre, or spell the genre letter by letter{" "}
+      </h4>
+    </div>;
   }
 
   return (

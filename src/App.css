@@ -1,14 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 .App {
   text-align: center;
 }
 
+
+body{
+  font-family: 'PT Serif', serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+#genrestext{
+  font-family: 'PT Serif', serif;
+  font-size: 10vh;
+  color: grey;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
 .microphone-icon {
-  height: 40vmin;
+  height: 20vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
