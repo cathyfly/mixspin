@@ -6,6 +6,7 @@ import logo from "./logo.svg";
 import Voicesearch from "./components/voicesearch.js";
 import Mixcloud from "./components/mixcloud.js";
 import Genrestext from "./components/genrestext.js";
+import Blob from "./components/blob.js";
 
 
 
@@ -32,20 +33,13 @@ class App extends Component {
     //pass genre to mixcloud "child" component 
    return (
      <div className="App">
-       
-
+       <Blob />
        <Genrestext />
-       
+
        <Voicesearch genreHandler={genreHandler.bind(this)} />
 
-       <Mixcloud genre={this.state.genre} /> 
-
-     
-
-       
+       <Mixcloud genre={this.state.genre} />
      </div>
-
-     
    );
 }
 }
