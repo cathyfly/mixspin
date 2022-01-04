@@ -1,4 +1,5 @@
 ## Welcome to Mixspin!
+https://mixspin.herokuapp.com/
 Mixspin is an app designed to help you discover new music. It delivers you a randomly selected music mix based on search by your choice of genre. Mixspin currentl uses the Mixcloud API to find music, and in the future we will be adding more music service APIs to enable our users to disvoer even more music.
 
 ## How to use Mixspin!
