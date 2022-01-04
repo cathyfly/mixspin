@@ -185,7 +185,7 @@ body{
 
   #genrestext{
   font-family: 'Playfair Display', serif;
-  font-size: 4vh;
+  font-size: 5vh;
   font-weight: 700;
   line-height: 10vh;
   padding: 3vh;
@@ -204,17 +204,17 @@ body{
 
 h4{
   margin: 2em;
-  font-size: 3vh;
+  font-size: 5vh;
 }
 
 h5{
   margin: 2em;
-  font-size: 2vh;
+  font-size: 4vh;
 }
 
 h6{
   margin: 2em;
-  font-size: 1vh;
+  font-size: 3vh;
 }
 
 
