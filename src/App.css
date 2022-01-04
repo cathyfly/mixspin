@@ -203,17 +203,17 @@ body{
 }
 
 h4{
-  margin: 2em;
-  font-size: 5vh;
-}
-
-h5{
-  margin: 2em;
+  margin: 1em;
   font-size: 4vh;
 }
 
+h5{
+  margin: 1em;
+  font-size: 3vh;
+}
+
 h6{
-  margin: 2em;
+  margin: 1em;
   font-size: 3vh;
 }
 
