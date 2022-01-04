@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, useEffect, Component } from "react";
-import Button from "react-bootstrap/Button";
+/*import Button from "react-bootstrap/Button";*/
 import logo from "./logo.svg";
 import Voicesearch from "./components/voicesearch.js";
 import Mixcloud from "./components/mixcloud.js";
