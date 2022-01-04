@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 <head>
 
-  <title> Mixspin </title>;
+  <title> MixSpin </title>;
 
   </head>
 

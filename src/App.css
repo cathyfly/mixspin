@@ -1,21 +1,53 @@
-/*https://codepen.io/notwaldorf/pen/omXwzw*/
+/*https://codepen.io/notwaldorf/pen/omXwzw - the blob animation*/
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@800&family=Spectral:wght@800&display=swap');
 
-body {
-  font-family: 'PT Serif', serif;
-  background-color:red;
-}
+
 
 .App {
+ font-family: 'Playfair Display', serif;
+  
   text-align: center;
+
+  color: grey;
+
+  margin: 3em;
   
 }
 
+.voicesearch {
 
-.body{
+  font-family: 'Playfair Display', serif;
+  
+  text-align: center;
+
+  color: grey;
+
+
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  color: grey;
+}
+
+h4 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 10vh;
+
+}
+
+h6{
+  margin: 2em;
+  font-size: 7vh;
+}
+
+body{
   font-family: 'PT Serif', serif;
   background-color:skyblue;
+  padding: 0.5em;
 }
 
 .App-logo {
@@ -24,9 +56,10 @@ body {
 }
 
 #genrestext{
-  font-family: 'PT Serif', serif;
-  font-size: 10vh;
-  color: grey;
+  font-family: 'Playfair Display', serif;
+  font-size: 16vh;
+  font-weight: 900;
+  color: white;
   display: flex;
   position: relative;
   top: 0;
@@ -40,11 +73,43 @@ body {
   
 }
 
+#microphonebutton {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  height: 15vh;
+  width: 25vw;
+  border-style: solid;
+  border-color: white;
+  border-radius: 9em;
+  margin: 3vh;
+ background-color: transparent;
+}
+
+#microphone-stop-reset {
+  font-family: 'Playfair Display', serif;
+  color: black;
+  height: 5vh;
+  width: 10vw;
+  border-style: solid;
+  border-color: white;
+  border-radius: 3em;
+  margin: 3vh;
+ background-color: white;
+
+}
+
+.microphone-result-text{
+
+  font-style: italic;
+  color: white;
+  
+}
+
 .blob {
   position: absolute;
   top: 0;
   left: 0;
-  fill: peachpuff;
+  fill: rgb(248, 0, 227);
   width: 50vmax;
   z-index: -1;
   animation: move 10s ease-in-out infinite;
@@ -62,7 +127,22 @@ body {
 
 
 .microphone-icon {
-  height: 20vmin;
+  height: 10vmin;
+  fill: white;
+  padding-right: .5vh;
+}
+
+
+
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -93,4 +173,24 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 768px) {
+  #genrestext{
+  font-family: 'Playfair Display', serif;
+  font-size: 5vh;
+  font-weight: 700;
+  padding: 1em;
+ }
+
+ #microphonebutton {
+  height: 15vh;
+  width: 60vw;
+}
+
+#microphone-stop-reset {
+  height: 5vh;
+  width: 60vw;
+}
+
 }

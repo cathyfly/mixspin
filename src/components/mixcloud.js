@@ -1,3 +1,4 @@
+/*https://www.mixcloud.com/developers/*/
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
@@ -65,10 +66,10 @@ function Mixcloud(props) {
           src={
             "https://api.mixcloud.com" + show.data[rand].key + "embed-html/"
           }
-          allowtransparency={"true"}
-          width={"100%"}
+          
+          width={"80%"}
           height={"180"}
-          allow="autoplay 'src'"
+          
         />
       </div>
       
@@ -89,7 +90,7 @@ function Mixcloud(props) {
     return (
     <div>
       <h4>
-        Welcome!
+        
       </h4>
     </div>
     );

@@ -3,25 +3,26 @@ import ReactTextTransition, { presets } from "react-text-transition";
 
 const texts = [
   "Spin",
-  "pop",
-  "hip hop",
+  "Pop",
+  "Hip-hop",
   "Spin",
-  "house",
-  "ukg",
+  "House",
+  "Ukg",
   "Spin",
-  "hyperpop",
-  "funk",
-  "chillout",
+  "Hyperpop",
+  "Funk",
+  "Chillout",
   "Spin",
-  "jungle",
+  "Jungle",
   "90s",
   "Spin",
-  "gqom",
-  "techno",
-  "trance",
+  "Gqom",
+  "Techno",
+  "Reggae",
+  "Trance",
   "Spin",
-  "soul",
-  "disco",
+  "Soul",
+  "Disco",
 ];
 
 class Genrestext extends Component {
@@ -46,13 +47,18 @@ class Genrestext extends Component {
         <div className="container-fluid d-flex justify-conetent-center">
           <div className="col-md-12" id="genrestext">
             <React.Fragment>
-              <section>
-              <p>Mix</p> <ReactTextTransition
+              <section className="inline">
+                Mix
+                <ReactTextTransition
                   text={texts[this.state.textIndex % texts.length]}
-                  springConfig={{ stiffness: 50, damping: 20 }}
+                  springConfig={presets.gentle}
+                  style={{ margin: "0 4px" }}
+                  inline
                 />
               </section>
             </React.Fragment>
+            <h5> MixSpin | Find something new to listen to </h5>
+            <h6> Click the button | Say "Play" and a genre </h6>
           </div>
         </div>
       </div>

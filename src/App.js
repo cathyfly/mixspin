@@ -27,6 +27,7 @@ class App extends Component {
 
   render() {
 
+    document.body.style.background = "black";
     var genreHandler = this.genreHandler; 
     //var genre = this.genre;
 

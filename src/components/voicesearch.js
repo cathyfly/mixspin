@@ -6,6 +6,7 @@ import SpeechRecognition, {
 
 import microPhoneIcon from "./microphone.svg";
 
+
 function Voicesearch(props) {
 
   const commands = [
@@ -15,7 +16,7 @@ function Voicesearch(props) {
       callback: (genre) => {
           
         props.genreHandler(genre);
-        document.body.style.background = "pink";
+        
 
         //
         
@@ -41,12 +42,7 @@ function Voicesearch(props) {
       },
     },
     
-    {
-      command: "reset background colour",
-      callback: () => {
-        document.body.style.background = `rgba(0, 0, 0, 0.8)`;
-      },
-    },
+    
   ];
   const { transcript, resetTranscript } = useSpeechRecognition({ commands });
   const [isListening, setIsListening] = useState(false);
@@ -60,7 +56,7 @@ function Voicesearch(props) {
   }
   const handleListing = () => {
     setIsListening(true);
-    microphoneRef.current.classList.add("listening");
+    //microphoneRef.current.classList.add("listening");
     SpeechRecognition.startListening(/*{
       //continuous: true,
     }*/);
@@ -75,31 +71,32 @@ function Voicesearch(props) {
     resetTranscript();
   };
   return (
-
-
-      
     <div className="microphone-wrapper">
       <div className="mircophone-container">
-        <div
-          className="microphone-icon-container"
-          ref={microphoneRef}
-          onClick={handleListing}
-        >
-          <img src={microPhoneIcon} className="microphone-icon" />
-        </div>
-        <div className="microphone-status">
-          {isListening ? "Listening........." : "Click to start Listening"}
-        </div>
+        <button id="microphonebutton">
+          <div
+            className="microphone-icon-container"
+            ref={microphoneRef}
+            onClick={handleListing}
+          >
+            <img src={microPhoneIcon} className="microphone-icon" />
+            Discover mixes
+          </div>
+        </button>
+        <div className="microphone-status">{isListening ? "" : ""}</div>
         {isListening && (
-          <button className="microphone-stop btn" onClick={stopHandle}>
+          <button id="microphone-stop-reset" onClick={stopHandle}>
             Stop
           </button>
         )}
       </div>
       {transcript && (
         <div className="microphone-result-container">
-          <div className="microphone-result-text">{transcript}</div>
-          <button className="microphone-reset btn" onClick={handleReset}>
+         
+           
+              <div className="microphone-result-text">{transcript}
+          </div>
+          <button id="microphone-stop-reset" onClick={handleReset}>
             Reset
           </button>
         </div>
