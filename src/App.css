@@ -48,6 +48,8 @@ body{
   font-family: 'PT Serif', serif;
   background-color:skyblue;
   padding: 0.5em;
+  max-width: 100%;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .App-logo {
@@ -175,7 +177,11 @@ body{
   }
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
+
+  .blob {
+  max-width: 100%;
+  }
 
   #genrestext{
   font-family: 'Playfair Display', serif;
@@ -198,17 +204,17 @@ body{
 
 h4{
   margin: 2em;
-  font-size: 5vh;
+  font-size: 3vh;
 }
 
 h5{
   margin: 2em;
-  font-size: 5vh;
+  font-size: 2vh;
 }
 
 h6{
   margin: 2em;
-  font-size: 5vh;
+  font-size: 1vh;
 }
 
 
