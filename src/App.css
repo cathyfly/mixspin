@@ -35,18 +35,18 @@ p {
 h4 {
   font-family: 'Playfair Display', serif;
   color: white;
-  font-size: 10vh;
+  font-size: 6vh;
 
 }
 
 h5{
   margin: 2em;
-  font-size: 8vh;
+  font-size: 4vh;
 }
 
 h6{
   margin: 2em;
-  font-size: 7vh;
+  font-size: 3.5vh;
 }
 
 body{
