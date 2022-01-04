@@ -43,9 +43,8 @@ class Genrestext extends Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="container-fluid d-flex justify-conetent-center">
-          <div className="col-md-12" id="genrestext">
+      
+          <div  id="genrestext">
             <React.Fragment>
               <section className="inline">
                 Mix
@@ -59,8 +58,7 @@ class Genrestext extends Component {
             </React.Fragment>
             <h5> MixSpin | Find something new to listen to </h5>
             <h6> Click the button | Say "Play" and a genre </h6>
-          </div>
-        </div>
+         
       </div>
     );
   }

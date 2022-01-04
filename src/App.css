@@ -176,21 +176,35 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+
   #genrestext{
   font-family: 'Playfair Display', serif;
-  font-size: 5vh;
+  font-size: 4vh;
   font-weight: 700;
-  padding: 1em;
+  line-height: 10vh;
+  padding: 3vh;
  }
 
  #microphonebutton {
   height: 15vh;
   width: 60vw;
+  padding: 1vh;
 }
 
 #microphone-stop-reset {
   height: 5vh;
   width: 60vw;
 }
+
+h5{
+  margin: 2em;
+  font-size: 5vh;
+}
+
+h6{
+  margin: 2em;
+  font-size: 5vh;
+}
+
 
 }
