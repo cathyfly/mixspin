@@ -196,6 +196,11 @@ body{
   width: 60vw;
 }
 
+h4{
+  margin: 2em;
+  font-size: 5vh;
+}
+
 h5{
   margin: 2em;
   font-size: 5vh;
