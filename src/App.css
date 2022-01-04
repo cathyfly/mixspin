@@ -39,6 +39,11 @@ h4 {
 
 }
 
+h5{
+  margin: 2em;
+  font-size: 8vh;
+}
+
 h6{
   margin: 2em;
   font-size: 7vh;
